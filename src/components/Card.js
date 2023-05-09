@@ -1,0 +1,41 @@
+import Img from "next/image";
+import { BsGithub, BsGlobe } from "react-icons/bs";
+const Card = ({ project, imageProps }) => {
+  return (
+    <div className="max-w-md m-4  bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700 md:max-w-xs hover:scale-110">
+      <Img
+        {...imageProps}
+        style={{ width: "100%", height: "auto" }}
+        sizes="(max-width: 800px) 100vw, 800px"
+        alt={project.image.alt}
+      ></Img>
+      <div className="p-5">
+        <h5 className="mb-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          {project.name}
+        </h5>
+        <p className="mb-4 font-normal text-sm text-gray-700 dark:text-gray-400">
+          {project.description}
+        </p>
+        <div className="flex">
+          {project.githuburl && (
+            <a href={project.githuburl}>
+              <BsGithub
+                size={25}
+                className="hover:text-pink-500 mx-2"
+              ></BsGithub>
+            </a>
+          )}
+          {project.projecturl && (
+            <a href={project.projecturl}>
+              <BsGlobe
+                size={25}
+                className="hover:text-pink-500  ml-4"
+              ></BsGlobe>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Card;
