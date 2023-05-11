@@ -21,7 +21,7 @@ const links = [
   },
 ];
 
-const Header = ({ textStyle }) => {
+const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -29,7 +29,7 @@ const Header = ({ textStyle }) => {
   };
 
   return (
-    <header className="bg-black shadow text-white mt-8 sticky top-0 z-50">
+    <header className="dark:bg-black bg-inherit bg-opacity-100 shadow  mt-8 sticky top-0 z-50">
       <Head>
         <title>Naitik Lodha</title>
       </Head>
@@ -54,7 +54,7 @@ const Header = ({ textStyle }) => {
                 </Link>
               </li>
             ))}
-            <button className="bg-gradient-to-tr p-2 top-0 px-4 rounded-md from-pink-600 to-purple-500 animate-bounce">
+            <button className="bg-gradient-to-tr p-2 text-white top-0 px-4 rounded-md from-pink-600 to-purple-500 animate-bounce">
               <a className="flex" href="NAITIK LODHA.pdf" title="" download>
                 Resume
                 <FiDownload size={20} color="white" />
@@ -123,8 +123,8 @@ const Header = ({ textStyle }) => {
                   </Link>
                 </li>
               ))}
-              <button className="bg-gradient-to-tr w-48 p-2 mx-6 rounded-md from-pink-600 to-purple-500 animate-bounce">
-                <a className="flex" href="NAITIK LODHA.pdf" title="" download>
+              <button className="bg-gradient-to-tr light:text-white w-48 p-2 mx-6 rounded-md from-pink-600 to-purple-500 animate-bounce">
+                <a className="flex light:text-white" href="NAITIK LODHA.pdf" title="" download>
                   Resume
                   <FiDownload size={20} color="white" />
                 </a>

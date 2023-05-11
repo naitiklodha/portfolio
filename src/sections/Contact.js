@@ -1,20 +1,20 @@
 import React from "react";
 import { BsPhone } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import SocialLinks from "./SocialLinks";
+import SocialLinks from "../components/SocialLinks";
 import { useRef } from "react";
 import axios from "axios";
 const Contact = ({ textStyle }) => {
   const inputStyle =
-    "border border-white border-solid bg-black pl-4 rounded-md py-2 m-4 w-60";
+    "border  border-gray-900 dark:border-white border-solid bg-transparent pl-4 rounded-md py-2 m-4 w-60";
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url =process.env.NEXT_PUBLIC_APPSCRIPT_URI;
-        const data = {
+    const url = process.env.NEXT_PUBLIC_APPSCRIPT_URI;
+    const data = {
       name: nameRef.current?.value,
       email: emailRef.current?.value,
       message: messageRef.current?.value,
@@ -30,12 +30,11 @@ const Contact = ({ textStyle }) => {
     fetch(url, requestOptions)
       .then((response) => {
         alert("Message sent sucessfully!");
-        nameRef.current.value='';
-        emailRef.current.value='';
-        messageRef.current.value='';
-
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        messageRef.current.value = "";
       })
-    
+
       .catch((error) => {
         console.error("Error:", error);
         // Handle any errors that occurred during the request
