@@ -13,9 +13,8 @@ const Contact = ({ textStyle }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url =
-      "https://script.google.com/macros/s/AKfycbyzn2hp3zQlOd77VAUiMJS5dGqlPeUMWnQ3HUkEtuFFYDlNd5IwK4J-rRJaLN80RuGkIA/exec";
-    const data = {
+    const url =process.env.NEXT_PUBLIC_APPSCRIPT_URI;
+        const data = {
       name: nameRef.current?.value,
       email: emailRef.current?.value,
       message: messageRef.current?.value,
