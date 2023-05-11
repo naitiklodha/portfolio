@@ -5,23 +5,23 @@ import Link from "next/link";
 const links = [
   {
     title: "About",
-    href: "#",
-  },
-  {
-    title: "Projects",
-    href: "#projects",
+    href: "#about",
   },
   {
     title: "Skills",
     href: "#skills",
   },
   {
+    title: "Projects",
+    href: "#projects",
+  },
+  {
     title: "Contact",
-    href: "#",
+    href: "#contact",
   },
 ];
 
-function Header() {
+const Header = ({ textStyle }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -35,14 +35,20 @@ function Header() {
       </Head>
       <div className="max-w-7xl mx-auto py-4 px-6 flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="font-extrabold  ml-2 uppercase text-transparent text-3xl bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-yellow-500">
-            NL
-          </h1>
+          <Link href={"#"}>
+  
+            <h1 className="font-extrabold  ml-2 text-transparent text-3xl bg-clip-text bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-500">
+              {"< Naitik />"}
+            </h1>
+          </Link>
         </div>
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             {links.map((link, index) => (
-              <li key={index} className="hover:scale-125">
+              <li
+                key={index}
+                className={` text-xl hover:scale-125  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500`}
+              >
                 <Link href={link.href} scroll={true}>
                   {link.title}
                 </Link>
@@ -110,14 +116,14 @@ function Header() {
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className="text-white hover:text-indigo-500 font-medium"
+                    className={`text-md hover:scale-125  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500 mx-6`}
                     scroll={true}
                   >
                     {link.title}
                   </Link>
                 </li>
               ))}
-              <button className="bg-gradient-to-tr max-w-xs p-2  rounded-md from-pink-600 to-purple-500 animate-bounce">
+              <button className="bg-gradient-to-tr w-48 p-2 mx-6 rounded-md from-pink-600 to-purple-500 animate-bounce">
                 <a className="flex" href="NAITIK LODHA.pdf" title="" download>
                   Resume
                   <FiDownload size={20} color="white" />
@@ -129,5 +135,5 @@ function Header() {
       )}
     </header>
   );
-}
+};
 export default Header;

@@ -4,7 +4,7 @@ import Card from "./Card";
 export default function Projects({ projects,client,textStyle }) {
   return (
     <div className="m-4" id="projects">
-      <h1 class={`${textStyle} text-5xl uppercase text-center`}>
+      <h1 className={`${textStyle} text-5xl uppercase text-center mb-8`}>
         Projects
       </h1>
 
@@ -12,7 +12,7 @@ export default function Projects({ projects,client,textStyle }) {
         {projects.map((project) => {
           const imageProps = useNextSanityImage(client, project.image);
 
-          return <Card project={project} imageProps={imageProps} />;
+          return <div key={project.name}><Card project={project} imageProps={imageProps} textStyle={textStyle} /></div>;
         })}
       </div>
     </div>

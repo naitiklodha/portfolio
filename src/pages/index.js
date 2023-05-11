@@ -1,9 +1,14 @@
 import { Inter } from "next/font/google";
 import { createClient } from "next-sanity";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import dynamic from 'next/dynamic';
+
+const Hero=dynamic(()=>import("@/components/Hero"));
+const About=dynamic(()=>import("@/components/About"));
+const Skills=dynamic(()=>import("@/components/Skills"));
+const Projects=dynamic(()=>import("@/components/Projects"));
+const Contact=dynamic(()=>import("@/components/Contact"));
+
 
 const inter = Inter({ subsets: ["latin"] });
 const client = createClient({
@@ -17,21 +22,23 @@ export default function Home({ projects, skills }) {
     "text-3xl font-bold text-transparent  bg-clip-text bg-gradient-to-tr from-purple-500  to-pink-500";
   return (
     <>
-      <Header />
+      <Header textStyle={textStyle}/>
       <Hero textStyle={textStyle} />
       <main
         className={`flex min-h-screen flex-col items-center justify-between overflow-hidden  p-24 ${inter.className}`}
       >
+        <About textStyle={textStyle}/>
         <Skills
           skills={skills}
           client={client}
           textStyle={textStyle}
-        ></Skills>
+        />
         <Projects
           projects={projects}
           client={client}
           textStyle={textStyle}
-        ></Projects>
+        />
+        <Contact textStyle={textStyle}/>
       </main>
     </>
   );
