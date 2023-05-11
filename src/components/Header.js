@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <header className="dark:bg-black bg-inherit bg-opacity-100 shadow  mt-8 sticky top-0 z-50">
+    <header className="dark:bg-black bg-gray-300 bg-opacity-100 shadow  mt-8 sticky top-0 z-50">
       <Head>
         <title>Naitik Lodha</title>
       </Head>

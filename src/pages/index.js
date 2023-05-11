@@ -3,11 +3,11 @@ import { createClient } from "next-sanity";
 import Header from "@/components/Header";
 import dynamic from "next/dynamic";
 
-const Hero = dynamic(() => import("@/sections/Hero"));
-const About = dynamic(() => import("@/sections/About"));
-const Skills = dynamic(() => import("@/sections/Skills"));
-const Projects = dynamic(() => import("@/sections/Projects"));
-const Contact = dynamic(() => import("@/sections/Contact"));
+const Hero = dynamic(() => import("@/components/Hero"));
+const About = dynamic(() => import("@/components/About"));
+const Skills = dynamic(() => import("@/components/Skills"));
+const Projects = dynamic(() => import("@/components/Projects"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 const inter = Inter({ subsets: ["latin"] });
 const client = createClient({
@@ -20,7 +20,7 @@ export default function Home({ projects, skills }) {
   const textStyle =
     "text-3xl font-bold text-transparent  bg-clip-text bg-gradient-to-tr from-purple-500  to-pink-500";
   return (
-    <div className="bg-gray-200 dark:bg-black">
+    <>
       <Header />
       <Hero textStyle={textStyle} />
       <main
@@ -31,7 +31,7 @@ export default function Home({ projects, skills }) {
         <Projects projects={projects} client={client} textStyle={textStyle} />
         <Contact textStyle={textStyle} />
       </main>
-    </div>
+    </>
   );
 }
 

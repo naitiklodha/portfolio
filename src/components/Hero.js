@@ -1,5 +1,5 @@
 import Typewriter from "typewriter-effect";
-import SocialLinks from "../components/SocialLinks";
+import SocialLinks from "./SocialLinks";
 
 const Hero = ({ textStyle }) => {
   return (

@@ -1,12 +1,12 @@
 import React from "react";
 import { BsPhone } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
-import SocialLinks from "../components/SocialLinks";
+import SocialLinks from "./SocialLinks";
 import { useRef } from "react";
 import axios from "axios";
 const Contact = ({ textStyle }) => {
   const inputStyle =
-    "border  border-gray-900 dark:border-white border-solid bg-transparent pl-4 rounded-md py-2 m-4 w-60";
+    "border bg-gray-200 dark:bg-black border-gray-900 dark:border-white border-solid bg-transparent pl-4 rounded-md py-2 m-4 w-60";
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
@@ -77,7 +77,10 @@ const Contact = ({ textStyle }) => {
           <SocialLinks />
         </div>
         <div>
-          <form className="flex flex-col items-center" onSubmit={handleSubmit}>
+          <form
+            className="flex flex-col bg-inherit items-center"
+            onSubmit={handleSubmit}
+          >
             <input
               type="text"
               placeholder="Your Name"

@@ -1,5 +1,5 @@
 import { useNextSanityImage } from "next-sanity-image";
-import Card from "../components/Card";
+import Card from "./Card";
 
 export default function Projects({ projects, client, textStyle }) {
   return (
