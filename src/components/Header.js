@@ -32,11 +32,17 @@ const Header = () => {
     <header className="dark:bg-black bg-gray-300 bg-opacity-100 shadow  mt-8 sticky top-0 z-50">
       <Head>
         <title>Naitik Lodha</title>
+        <meta property="og:title" content="Naitik Lodha" />
+        <meta
+          property="og:description"
+          content=" Naitik Lodha is a passionate web developer with a focus on learning
+          and exploring new technologies"
+        />
+        <meta property="og:image" content="image.png" />
       </Head>
       <div className="max-w-7xl mx-auto py-4 px-6 flex justify-between items-center">
         <div className="flex items-center">
-          <Link href={"#"}>
-  
+          <Link href="#">
             <h1 className="font-extrabold  ml-2 text-transparent text-3xl bg-clip-text bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-500">
               {"< Naitik />"}
             </h1>
@@ -124,7 +130,12 @@ const Header = () => {
                 </li>
               ))}
               <button className="bg-gradient-to-tr light:text-white w-48 p-2 mx-6 rounded-md from-pink-600 to-purple-500 animate-bounce">
-                <a className="flex light:text-white" href="NAITIK LODHA.pdf" title="" download>
+                <a
+                  className="flex light:text-white"
+                  href="NAITIK LODHA.pdf"
+                  title=""
+                  download
+                >
                   Resume
                   <FiDownload size={20} color="white" />
                 </a>
