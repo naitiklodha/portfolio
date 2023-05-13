@@ -38,6 +38,10 @@ const Header = () => {
           content=" Naitik Lodha is a passionate web developer with a focus on learning
           and exploring new technologies"
         />
+        <meta
+          name="google-site-verification"
+          content="dlkM9uq8vriBaZ1483qLaZ-6rRmAPY3FI6wD_XBMAkY"
+        />
         <meta property="og:image" content="image.png" />
       </Head>
       <div className="max-w-7xl mx-auto py-4 px-6 flex justify-between items-center">
