@@ -18,7 +18,7 @@ const client = createClient({
 
 export default function Home({ projects, skills }) {
   const textStyle =
-    "text-3xl font-bold text-transparent  bg-clip-text bg-gradient-to-tr from-purple-500  to-pink-500";
+    "text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-purple-500  to-pink-500";
   return (
     <>
       <Header />
