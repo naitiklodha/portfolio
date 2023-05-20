@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <header className="dark:bg-black max-w-[100%] dark:bg-opacity-50 w-screen shadow overflow-hidden sticky top-0 z-50">
+    <header className="dark:bg-black max-w-[100%] mt-8 dark:bg-opacity-50 w-screen shadow overflow-hidden sticky top-0 z-50">
       <Head>
         <title>Naitik Lodha</title>
         <meta property="og:title" content="Naitik Lodha" />
@@ -119,7 +119,10 @@ const Header = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="block backdrop-blur bg-opacity-25 md:hidden" id="mobile-menu">
+        <div
+          className="block backdrop-blur bg-opacity-25 md:hidden"
+          id="mobile-menu"
+        >
           <nav>
             <ul className="flex flex-col h-screen text-3xl justify-center items-center space-y-4">
               {links.map((link, index) => (
@@ -142,7 +145,7 @@ const Header = () => {
                   download
                 >
                   Resume
-                  <FiDownload size={35} color="white" className="ml-2"/>
+                  <FiDownload size={35} color="white" className="ml-2" />
                 </a>
               </button>
             </ul>

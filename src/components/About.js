@@ -1,6 +1,6 @@
 const About = ({textStyle}) => {
   return (
-    <div className="mb-8 text-lg max-w-[90vw] md:max-w-[75vw]" id="about">
+    <div className="mb-8 text-lg max-w-[85vw]  w-screen md:max-w-[75vw]" id="about">
       <h2 className={`${textStyle} text-center uppercase text-5xl mb-8`}>About Me</h2>
       <p className="my-4 md:mx-8">
         I am a passionate web developer with a focus on learning
