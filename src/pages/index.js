@@ -20,7 +20,7 @@ export default function Home({ projects, skills }) {
   const textStyle =
     "text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-purple-500  to-pink-500";
   return (
-    <div className="overflow-hidden">
+    <>
       <Header />
       <Hero textStyle={textStyle} />
       <main
@@ -31,7 +31,7 @@ export default function Home({ projects, skills }) {
         <Projects projects={projects} client={client} textStyle={textStyle} />
         <Contact textStyle={textStyle} />
       </main>
-    </div>
+    </>
   );
 }
 

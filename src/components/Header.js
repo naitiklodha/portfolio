@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <header className="dark:bg-black dark:bg-opacity-50 w-screen shadow  mt-8 sticky top-0 z-50">
+    <header className="dark:bg-black max-w-[100%] dark:bg-opacity-50 w-screen shadow overflow-hidden sticky top-0 z-50">
       <Head>
         <title>Naitik Lodha</title>
         <meta property="og:title" content="Naitik Lodha" />
