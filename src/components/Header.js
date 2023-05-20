@@ -29,7 +29,7 @@ const Header = () => {
   };
 
   return (
-    <header className="dark:bg-black bg-gray-300 bg-opacity-100 shadow  mt-8 sticky top-0 z-50">
+    <header className="dark:bg-black dark:bg-opacity-50 w-screen shadow  mt-8 sticky top-0 z-50">
       <Head>
         <title>Naitik Lodha</title>
         <meta property="og:title" content="Naitik Lodha" />
@@ -44,10 +44,10 @@ const Header = () => {
         />
         <meta property="og:image" content="image.png" />
       </Head>
-      <div className="max-w-7xl mx-auto py-4 px-6 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto py-4 px-6 backdrop-filter backdrop-blur-md flex justify-between items-center">
         <div className="flex items-center">
           <Link href="#">
-            <h1 className="font-extrabold  ml-2 text-transparent text-3xl bg-clip-text bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-500">
+            <h1 className="font-extrabold  ml-2 text-transparent text-3xl bg-clip-text bg-gradient-to-bl from-pink-500 to-purple-500 ">
               {"< Naitik />"}
             </h1>
           </Link>
@@ -119,29 +119,30 @@ const Header = () => {
         </div>
       </div>
       {isOpen && (
-        <div className="block md:hidden" id="mobile-menu">
+        <div className="block backdrop-blur bg-opacity-25 md:hidden" id="mobile-menu">
           <nav>
-            <ul className="flex flex-col space-y-4">
+            <ul className="flex flex-col h-screen text-3xl justify-center items-center space-y-4">
               {links.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className={`text-md hover:scale-125  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500 mx-6`}
+                    className={`text-md hover:scale-125 mt-4 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500 mx-6`}
                     scroll={true}
+                    onClick={toggleMenu}
                   >
                     {link.title}
                   </Link>
                 </li>
               ))}
-              <button className="bg-gradient-to-tr light:text-white w-48 p-2 mx-6 rounded-md from-pink-600 to-purple-500 animate-bounce">
+              <button className="bg-gradient-to-tr  rounded-md from-pink-600 to-purple-500 ">
                 <a
-                  className="flex light:text-white"
+                  className="flex p-2 text-white"
                   href="NAITIK LODHA.pdf"
                   title=""
                   download
                 >
                   Resume
-                  <FiDownload size={20} color="white" />
+                  <FiDownload size={35} color="white" className="ml-2"/>
                 </a>
               </button>
             </ul>

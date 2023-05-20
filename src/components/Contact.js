@@ -99,7 +99,7 @@ const Contact = ({ textStyle }) => {
               className={inputStyle}
             />
             <button
-              className="bg-gradient-to-tr w-48 p-2 mx-6 rounded-md from-pink-600 to-purple-500 "
+              className="bg-gradient-to-tr w-48 p-2 mx-6 rounded-md from-pink-600 to-purple-500 text-white"
               type="submit"
             >
               Send Message

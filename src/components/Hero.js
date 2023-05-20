@@ -18,6 +18,7 @@ const Hero = ({ textStyle }) => {
                 strings: ["Student", "Web Developer", "AI/ML enthusiast"],
                 autoStart: true,
                 loop: true,
+                cursor:"|"
               }}
             ></Typewriter>
           </div>
