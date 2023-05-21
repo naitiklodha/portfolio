@@ -42,6 +42,8 @@ const Header = () => {
           name="description"
           content="Naitik Lodha - Web Developer | React, TailwindCSS, Next.js, Flask. Explore my diverse range of projects highlighting expertise and creativity in web development. Discover how I bring ideas to life with seamless functionality and engaging user interfaces"
         />
+        <meta name="robots" content="follow" />
+
         <meta
           name="keywords"
           content="HTML, CSS, JavaScript,React.js,React,TailwindCSS,Next,Next.js,Flask,Naitik Lodha"
