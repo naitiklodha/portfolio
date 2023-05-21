@@ -9,20 +9,20 @@ const SocialLinks = () => {
         href="https://github.com/naitik-lodha"
         className={iconStyle}
       >
-        <BsGithub size={35} />
+        <BsGithub size={35} title="GitHub Link of Naitik Lodha"/>
       </a>
 
       <a
         href="https://www.linkedin.com/in/naitik-lodha"
         className={iconStyle}
       >
-        <BsLinkedin size={35} />
+        <BsLinkedin size={35} title="LinkedIn Link of Naitik Lodha"/>
       </a>
       <a
         href="https://www.hackerrank.com/naitik_lodha"
         className={iconStyle}
       >
-        <FaHackerrank size={35} />
+        <FaHackerrank size={35} title="HackerRank Link of Naitik Lodha"/>
       </a>
     </div>
   );

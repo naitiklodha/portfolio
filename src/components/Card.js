@@ -24,6 +24,7 @@ const Card = ({ project, imageProps, textStyle }) => {
               <BsGithub
                 size={25}
                 className="hover:text-pink-500 mx-2"
+                title={`GitHub Repository for ${project.name}`}
               ></BsGithub>
             </a>
           )}
@@ -32,6 +33,7 @@ const Card = ({ project, imageProps, textStyle }) => {
               <BsGlobe
                 size={25}
                 className="hover:text-pink-500  ml-4"
+                title={`Live Website for ${project.name}`}
               ></BsGlobe>
             </a>
           )}
