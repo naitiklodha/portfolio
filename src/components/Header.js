@@ -37,7 +37,7 @@ const Header = () => {
           property="og:description"
           content="Naitik Lodha - Web Developer | React, TailwindCSS, Next.js, Flask. Explore my diverse range of projects highlighting expertise and creativity in web development. Discover how I bring ideas to life with seamless functionality and engaging user interfaces"
         />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta
           name="description"
           content="Naitik Lodha - Web Developer | React, TailwindCSS, Next.js, Flask. Explore my diverse range of projects highlighting expertise and creativity in web development. Discover how I bring ideas to life with seamless functionality and engaging user interfaces"

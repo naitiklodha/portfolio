@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Hero = ({ textStyle }) => {
   return (
-    <div className="md:flex">
-      <Image src="/profile.png" alt="Naitik" width={600} height={600}></Image>
+    <div className="md:flex mt-8">
+      <Image src="/profile.png" alt="Naitik" width={600} height={600} priority></Image>
       <div className=" md:mt-12 mx-4 text-center md:text-left">
         <h1 className="text-2xl my-4">
           Hello my name is,

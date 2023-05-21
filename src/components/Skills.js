@@ -1,5 +1,5 @@
 import { useNextSanityImage } from "next-sanity-image";
-import Img from "next/image";
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 export default function Skills({ skills, client, textStyle }) {
@@ -16,12 +16,12 @@ export default function Skills({ skills, client, textStyle }) {
             {skills.map((skill) => {
               const imageProps = useNextSanityImage(client, skill.image);
               return (
-                <Img
+                <Image
                   {...imageProps}
                   className="my-4 z-0 h-24 w-28 md:h-48 md:w-60 mx-4"
                   alt={skill.image.alt}
                   key={skill.name}
-                ></Img>
+                ></Image>
               );
             })}
           </div>
