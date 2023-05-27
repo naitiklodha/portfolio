@@ -8,7 +8,8 @@ const About = ({ textStyle }) => {
       <div className="md:flex">
         <div>
           {" "}
-          <p className="my-4 mt-8 md:mx-12">
+          <p className="my-6
+           mt-8 md:mx-12">
             I am a passionate web developer with a focus on learning and
             exploring new technologies. I have experience in Java, HTML, CSS,
             JS, React, Flask, and Tailwind CSS. I hold React Basics and Advanced

@@ -21,7 +21,7 @@ export default function Home({ projects, skills }) {
     "text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-purple-500  to-pink-500";
   return (
     <>
-      <Header />
+      <Header textStyle={textStyle} />
       <Hero textStyle={textStyle} />
       <main
         className={`flex min-h-screen flex-col items-center justify-between overflow-hidden  p-24 ${inter.className}`}

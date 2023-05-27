@@ -2,31 +2,34 @@ import Head from "next/head";
 import React, { useState } from "react";
 import { FiDownload } from "react-icons/fi";
 import Link from "next/link";
+import { useRouter } from "next/router";
 const links = [
   {
     title: "About",
-    href: "#about",
+    href: "/#about",
   },
   {
     title: "Skills",
-    href: "#skills",
+    href: "/#skills",
   },
   {
     title: "Projects",
-    href: "#projects",
+    href: "/#projects",
   },
   {
     title: "Contact",
-    href: "#contact",
+    href: "/#contact",
   },
 ];
 
-const Header = () => {
+const Header = ({ textStyle }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const router = useRouter();
+  console.log(router.asPath);
 
   return (
     <header className="dark:bg-black max-w-[100%] mt-8 dark:bg-opacity-50 w-screen shadow overflow-hidden sticky top-0 z-50">
@@ -70,7 +73,9 @@ const Header = () => {
             {links.map((link, index) => (
               <li
                 key={index}
-                className={` text-xl hover:scale-125  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500`}
+                className={` text-xl ${
+                  router.asPath === link.href ? `${textStyle} text-xl` : ""
+                } hover:scale-125  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500`}
               >
                 <Link href={link.href} scroll={true}>
                   {link.title}
