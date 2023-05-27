@@ -87,6 +87,12 @@ const Header = () => {
         </nav>
 
         <div className="md:hidden">
+          <button className="bg-gradient-to-tr p-2 text-white top-0 px-4 rounded-md from-pink-600 to-purple-500">
+            <a className="flex" href="NAITIK LODHA.pdf" title="" download>
+              Resume
+              <FiDownload size={20} color="white" />
+            </a>
+          </button>
           <button
             onClick={toggleMenu}
             type="button"
@@ -150,17 +156,6 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
-              <button className="bg-gradient-to-tr  rounded-md from-pink-600 to-purple-500 ">
-                <a
-                  className="flex p-2 text-white"
-                  href="NAITIK LODHA.pdf"
-                  title=""
-                  download
-                >
-                  Resume
-                  <FiDownload size={35} color="white" className="ml-2" />
-                </a>
-              </button>
             </ul>
           </nav>
         </div>
