@@ -1,8 +1,8 @@
 import Image from "next/image";
 const About = ({ textStyle }) => {
   return (
-    <div className="mb-8 text-lg md:text-xl max-w-[85vw]  w-screen" id="about">
-      <h2 className={`${textStyle} text-center uppercase text-5xl mb-8`}>
+    <section className="text-lg md:text-xl max-w-[85vw]  w-screen" id="about">
+      <h2 className={`${textStyle} text-center uppercase text-5xl mb-8 pt-20`}>
         About Me
       </h2>
       <div className="md:flex">
@@ -31,7 +31,7 @@ const About = ({ textStyle }) => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default About;

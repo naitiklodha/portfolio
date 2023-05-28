@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 export default function Skills({ skills, client, textStyle }) {
   return (
-    <div className="w-screen mb-8" id="skills">
+    <section className="w-screen  pt-20" id="skills">
       <h1
         className={`${textStyle} text-center text-5xl uppercase font-extrabold m-4 mb-8`}
       >
@@ -27,6 +27,6 @@ export default function Skills({ skills, client, textStyle }) {
           </div>
         </Marquee>
       </div>
-    </div>
+    </section>
   );
 }

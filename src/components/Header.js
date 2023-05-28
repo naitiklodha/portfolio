@@ -1,8 +1,10 @@
 import Head from "next/head";
 import React, { useState } from "react";
-import { FiDownload } from "react-icons/fi";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import ResumeDownload from "./ResumeDownload";
+import { FiX } from "react-icons/fi";
+import { RxHamburgerMenu } from "react-icons/rx";
 const links = [
   {
     title: "About",
@@ -29,10 +31,9 @@ const Header = ({ textStyle }) => {
     setIsOpen(!isOpen);
   };
   const router = useRouter();
-  console.log(router.asPath);
 
   return (
-    <header className="dark:bg-black max-w-[100%] mt-8 dark:bg-opacity-50 w-screen shadow overflow-hidden sticky top-0 z-50">
+    <header className="max-w-[100%] mt-8 dark:bg-opacity-50 w-screen shadow overflow-hidden sticky top-0 z-50">
       <Head>
         <title>Naitik Lodha</title>
         <meta property="og:title" content="Naitik Lodha" />
@@ -74,7 +75,7 @@ const Header = ({ textStyle }) => {
               <li
                 key={index}
                 className={` text-xl ${
-                  router.asPath === link.href ? `${textStyle} text-xl` : ""
+                  router.asPath === link.href ? `${textStyle} text-3xl` : ""
                 } hover:scale-125  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500`}
               >
                 <Link href={link.href} scroll={true}>
@@ -82,22 +83,15 @@ const Header = ({ textStyle }) => {
                 </Link>
               </li>
             ))}
-            <button className="bg-gradient-to-tr p-2 text-white top-0 px-4 rounded-md from-pink-600 to-purple-500 animate-bounce">
-              <a className="flex" href="NAITIK LODHA.pdf" title="" download>
-                Resume
-                <FiDownload size={20} color="white" />
-              </a>
-            </button>
+            <li></li>
+            <li>
+              <ResumeDownload />
+            </li>
           </ul>
         </nav>
 
         <div className="md:hidden">
-          <button className="bg-gradient-to-tr p-2 text-white top-0 px-4 rounded-md from-pink-600 to-purple-500">
-            <a className="flex" href="NAITIK LODHA.pdf" title="" download>
-              Resume
-              <FiDownload size={20} color="white" />
-            </a>
-          </button>
+          <ResumeDownload />
           <button
             onClick={toggleMenu}
             type="button"
@@ -106,39 +100,7 @@ const Header = ({ textStyle }) => {
             aria-expanded={isOpen}
           >
             <span className="sr-only">Open main menu</span>
-            {isOpen ? (
-              <svg
-                className="block h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="block h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
+            {isOpen ? <FiX size={24} /> : <RxHamburgerMenu size={24} />}
           </button>
         </div>
       </div>

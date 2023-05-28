@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import { createClient } from "next-sanity";
 import Header from "@/components/Header";
 import dynamic from "next/dynamic";
+import { useState, Fragment } from "react";
 
 const Hero = dynamic(() => import("@/components/Hero"));
 const About = dynamic(() => import("@/components/About"));
@@ -20,9 +21,10 @@ export default function Home({ projects, skills }) {
   const textStyle =
     "text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-purple-500  to-pink-500";
   return (
-    <>
+    <div className={`bg-gray-100 dark:bg-black text-black dark:text-gray-50 `}>
       <Header textStyle={textStyle} />
       <Hero textStyle={textStyle} />
+
       <main
         className={`flex min-h-screen flex-col items-center justify-between overflow-hidden  p-24 ${inter.className}`}
       >
@@ -31,7 +33,7 @@ export default function Home({ projects, skills }) {
         <Projects projects={projects} client={client} textStyle={textStyle} />
         <Contact textStyle={textStyle} />
       </main>
-    </>
+    </div>
   );
 }
 

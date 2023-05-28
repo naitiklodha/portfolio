@@ -1,11 +1,17 @@
 import Typewriter from "typewriter-effect";
 import SocialLinks from "./SocialLinks";
 import Image from "next/image";
-
+import ResumeDownload from "./ResumeDownload";
 const Hero = ({ textStyle }) => {
   return (
-    <div className="md:flex mt-8">
-      <Image src="/profile.png" alt="Naitik" width={600} height={600} priority></Image>
+    <section className="md:flex mt-8">
+      <Image
+        src="/profile.png"
+        alt="Naitik"
+        width={600}
+        height={600}
+        priority
+      ></Image>
       <div className=" md:mt-12 mx-4 text-center md:text-left">
         <h1 className="text-2xl my-4">
           Hello my name is,
@@ -19,14 +25,16 @@ const Hero = ({ textStyle }) => {
                 strings: ["Student", "Web Developer", "AI/ML enthusiast"],
                 autoStart: true,
                 loop: true,
-                cursor: "|",
               }}
             ></Typewriter>
           </div>
         </div>
         <SocialLinks />
+        <div className="mt-4">
+          <ResumeDownload />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Hero;

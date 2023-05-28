@@ -3,7 +3,7 @@ import Card from "./Card";
 
 export default function Projects({ projects, client, textStyle }) {
   return (
-    <div className="m-4" id="projects">
+    <div className="m-4 pt-20" id="projects">
       <h1 className={`${textStyle} text-5xl uppercase text-center mb-8`}>
         Projects
       </h1>

@@ -41,7 +41,7 @@ const Contact = ({ textStyle }) => {
       });
   };
   return (
-    <div className="my-8" id="contact">
+    <section className="my-8" id="contact">
       <h1
         className={`${textStyle} font-black text-5xl text-center uppercase mb-8`}
       >
@@ -107,7 +107,7 @@ const Contact = ({ textStyle }) => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
