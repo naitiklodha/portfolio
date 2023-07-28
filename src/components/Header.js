@@ -33,7 +33,7 @@ const Header = ({ textStyle }) => {
   const router = useRouter();
 
   return (
-    <header className="max-w-[100%] mt-8 dark:bg-opacity-50 w-screen shadow overflow-hidden sticky top-0 z-50">
+    <header className="max-w-[100%] mt-8 w-screen overflow-hidden sticky top-0 z-50">
       <Head>
         <title>Naitik Lodha</title>
         <meta property="og:title" content="Naitik Lodha" />

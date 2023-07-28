@@ -2,7 +2,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaHackerrank } from "react-icons/fa";
 
 const SocialLinks = () => {
-  const iconStyle="m-4 hover:scale-110 dark:hover:text-purple-500 hover:text-purple-800";
+  const iconStyle="m-4 hover:scale-110 hover:text-purple-500 ";
   return (
     <div className="flex md:mt-5 justify-center md:justify-normal">
       <a

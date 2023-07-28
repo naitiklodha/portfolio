@@ -25,3 +25,16 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+@layer base {
+::-webkit-scrollbar-thumb{
+@apply bg-transparent shadow-sm
+}
+::-webkit-scrollbar{
+@apply w-2 bg-transparent
+}
+::-webkit-scrollbar-thumb{
+@apply  rounded-full bg-gradient-to-tr from-purple-500  to-pink-500/*color trackbar*/
+}
+}

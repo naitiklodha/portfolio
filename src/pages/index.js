@@ -21,7 +21,7 @@ export default function Home({ projects, skills }) {
   const textStyle =
     "text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-purple-500  to-pink-500";
   return (
-    <div className={`bg-gray-100 dark:bg-black text-black dark:text-gray-50 `}>
+    <div className={`bg-black text-gray-50 `}>
       <Header textStyle={textStyle} />
       <Hero textStyle={textStyle} />
 

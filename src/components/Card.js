@@ -2,7 +2,7 @@ import Image from "next/image";
 import { BsGithub, BsGlobe } from "react-icons/bs";
 const Card = ({ project, imageProps, textStyle }) => {
   return (
-    <div className=" my-8 md:m-4 bg-white border w-screen max-w-[75vw] border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700 md:w-80 md:max-w-md hover:scale-110">
+    <div className=" my-8 md:m-4  border w-screen max-w-[75vw]  rounded-lg shadow  bg-black  border-gray-700 md:w-80 md:max-w-md hover:scale-110">
       <Image
         {...imageProps}
         style={{ width: "100%", height: "auto" }}
@@ -15,7 +15,7 @@ const Card = ({ project, imageProps, textStyle }) => {
         >
           {project.name}
         </h5>
-        <p className="mb-4 font-normal text-sm text-gray-700 dark:text-gray-400">
+        <p className="mb-4 font-normal text-sm  text-gray-400">
           {project.description}
         </p>
         <div className="flex">
