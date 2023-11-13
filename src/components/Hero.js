@@ -10,16 +10,17 @@ const Hero = () => {
   return (
     <section className="md:flex mt-12" id="top">
       <Fade left>
-        <div className="md:w-1/2 m-0">
+        <div className=" m-0">
           <Image src="/profile.png" alt="Naitik" width={600} height={300} priority />
         </div>
       </Fade>
       <Slide right>
         <div className="md:w-1/2 md:mt-12 mx-4 ml-8 text-center md:text-left">
-          <h1 className="text-2xl my-4">
+          <p className="text-2xl my-4">
             Hello, my name is,{" "}
-            <div className={`${textStyle} font-black text-5xl`}>Naitik Lodha</div>
-          </h1>
+          </p>
+          <h1 className={`${textStyle} font-black text-5xl`}>Naitik Lodha</h1>
+
           <div className="text-xl md:flex md:text-3xl">
             I am a 17-year-old&nbsp;
             <div className={textStyle}>

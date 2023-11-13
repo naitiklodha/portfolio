@@ -62,7 +62,7 @@ const Header = ( ) => {
         />
         <meta property="og:image" content="image.png" />
       </Head>
-      <div className="max-w-7xl mx-auto py-4 px-6 bg-black flex justify-between items-center">
+      <div className=" mx-auto py-4 px-6 sticky top-0 bg-black flex justify-between items-center">
         <div className="flex items-center">
           <Link href="#">
             <h1 className="font-extrabold  ml-2 text-transparent text-3xl bg-clip-text bg-gradient-to-bl from-pink-500 to-purple-500 ">

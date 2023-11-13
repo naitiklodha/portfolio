@@ -1,10 +1,10 @@
-// pages/index.js
-
 import { Inter } from "next/font/google";
+import { useState,useEffect } from "react";
 import client from "@/utils/sanity";
 import Header from "@/components/Header";
 import dynamic from "next/dynamic";
 import { Bounce } from "react-reveal";
+import Loading from "@/components/loading";
 
 const Hero = dynamic(() => import("@/components/Hero"));
 const About = dynamic(() => import("@/components/About"));
@@ -15,8 +15,22 @@ const Contact = dynamic(() => import("@/components/Contact"));
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ projects, skills }) {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
-    <div className={`bg-black text-gray-50`}>
+    <div className={`bg-black text-gray-400`}>
       <Bounce>
         <Header />
       </Bounce>

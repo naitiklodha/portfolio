@@ -1,30 +1,41 @@
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaHackerrank } from "react-icons/fa";
+import { Flip } from "react-reveal";
+
+const SocialLink = ({ href, icon, title }) => {
+  const iconStyle = "m-4 hover:scale-110 hover:text-purple-500";
+
+  return (
+    <Flip>
+      <a href={href} className={iconStyle} title={title}>
+        {icon}
+      </a>
+    </Flip>
+  );
+};
 
 const SocialLinks = () => {
-  const iconStyle="m-4 hover:scale-110 hover:text-purple-500 ";
   return (
     <div className="flex md:mt-5 justify-center md:justify-normal">
-      <a
+      <SocialLink
         href="https://github.com/naitik-lodha"
-        className={iconStyle}
-      >
-        <BsGithub size={35} title="GitHub Link of Naitik Lodha"/>
-      </a>
+        icon={<BsGithub size={35} />}
+        title="GitHub Link of Naitik Lodha"
+      />
 
-      <a
+      <SocialLink
         href="https://www.linkedin.com/in/naitik-lodha"
-        className={iconStyle}
-      >
-        <BsLinkedin size={35} title="LinkedIn Link of Naitik Lodha"/>
-      </a>
-      <a
+        icon={<BsLinkedin size={35} />}
+        title="LinkedIn Link of Naitik Lodha"
+      />
+
+      <SocialLink
         href="https://www.hackerrank.com/naitik_lodha"
-        className={iconStyle}
-      >
-        <FaHackerrank size={35} title="HackerRank Link of Naitik Lodha"/>
-      </a>
+        icon={<FaHackerrank size={35} />}
+        title="HackerRank Link of Naitik Lodha"
+      />
     </div>
   );
 };
+
 export default SocialLinks;

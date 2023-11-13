@@ -23,23 +23,31 @@ const SkillItem = ({ skill }) => {
 };
 
 const CategoryCard = ({ category }) => {
+  const sortSkillsDescending = (category) => {
+    return category.skills.sort((a, b) => b.level - a.level);
+  };
+  sortSkillsDescending(category);
+
   return (
-    <Zoom>
-      <div className="border-white border-2 p-6 mx-8 rounded-lg shadow-md">
+  
+      <div className="border-gray-500 border-2 p-6 mx-8 rounded-lg shadow-md hover:scale-110">
         <Slide top>
-          <h2 className="text-2xl font-bold mb-4 text-center">{category.name}</h2>
+          <h2 className={`${textStyle} text-2xl font-bold mb-4 text-center`}>{category.name}</h2>
         </Slide>
         <div className="">
-          {category.skills.map((skill) => (
-            <SkillItem key={skill._id} skill={skill} />
+          
+          {
+          category.skills.map((skill) => (
+            <SkillItem key={skill} skill={skill} />
           ))}
         </div>
       </div>
-    </Zoom>
+  
   );
 };
 
 const Skills = ({ skills }) => {
+
   return (
     <Slide bottom>
       <section className="py-16" id="skills">
@@ -59,5 +67,6 @@ const Skills = ({ skills }) => {
     </Slide>
   );
 };
+
 
 export default Skills;

@@ -6,9 +6,7 @@ import { textStyle } from "@/utils/styles";
 
 const Card = ({ project, imageProps }) => {
   return (
-    <Fade>
-      <Zoom>
-        <Bounce>
+   
           <div className="my-8 md:m-4 border w-screen max-w-[75vw] rounded-lg shadow bg-black border-gray-700 md:w-80 md:max-w-md hover:scale-110">
             <Image
               {...imageProps}
@@ -53,9 +51,7 @@ const Card = ({ project, imageProps }) => {
               </Zoom>
             </div>
           </div>
-        </Bounce>
-      </Zoom>
-    </Fade>
+     
   );
 };
 
