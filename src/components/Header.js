@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import ResumeDownload from "./ResumeDownload";
 import { FiX } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { textStyle } from "@/utils/styles";
 const links = [
   {
     title: "About",
@@ -24,7 +25,7 @@ const links = [
   },
 ];
 
-const Header = ({ textStyle }) => {
+const Header = ( ) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -61,7 +62,7 @@ const Header = ({ textStyle }) => {
         />
         <meta property="og:image" content="image.png" />
       </Head>
-      <div className="max-w-7xl mx-auto py-4 px-6 backdrop-filter backdrop-blur-md flex justify-between items-center">
+      <div className="max-w-7xl mx-auto py-4 px-6 bg-black flex justify-between items-center">
         <div className="flex items-center">
           <Link href="#">
             <h1 className="font-extrabold  ml-2 text-transparent text-3xl bg-clip-text bg-gradient-to-bl from-pink-500 to-purple-500 ">
@@ -83,7 +84,7 @@ const Header = ({ textStyle }) => {
                 </Link>
               </li>
             ))}
-            <li></li>
+          
             <li>
               <ResumeDownload />
             </li>
@@ -106,16 +107,16 @@ const Header = ({ textStyle }) => {
       </div>
       {isOpen && (
         <div
-          className="block backdrop-blur bg-opacity-25 md:hidden"
+          className="block  md:hidden"
           id="mobile-menu"
         >
           <nav>
-            <ul className="flex flex-col h-screen text-3xl justify-center items-center space-y-4">
+            <ul className="flex flex-col h-screen text-3xl justify-center bg-black items-center space-y-4">
               {links.map((link, index) => (
                 <li key={index}>
                   <Link
                     href={link.href}
-                    className={`text-md hover:scale-125 mt-4 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500 mx-6`}
+                    className={`text-lg hover:scale-125 mt-4 hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500 mx-6`}
                     scroll={true}
                     onClick={toggleMenu}
                   >

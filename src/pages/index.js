@@ -1,8 +1,10 @@
+// pages/index.js
+
 import { Inter } from "next/font/google";
-import { createClient } from "next-sanity";
+import client from "@/utils/sanity";
 import Header from "@/components/Header";
 import dynamic from "next/dynamic";
-import { useState, Fragment } from "react";
+import { Bounce } from "react-reveal";
 
 const Hero = dynamic(() => import("@/components/Hero"));
 const About = dynamic(() => import("@/components/About"));
@@ -11,27 +13,30 @@ const Projects = dynamic(() => import("@/components/Projects"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
 const inter = Inter({ subsets: ["latin"] });
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: "production",
-  useCdn: true,
-});
 
 export default function Home({ projects, skills }) {
-  const textStyle =
-    "text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-tr from-purple-500  to-pink-500";
   return (
-    <div className={`bg-black text-gray-50 `}>
-      <Header textStyle={textStyle} />
-      <Hero textStyle={textStyle} />
+    <div className={`bg-black text-gray-50`}>
+      <Bounce>
+        <Header />
+      </Bounce>
+      <Hero />
 
       <main
-        className={`flex min-h-screen flex-col items-center justify-between overflow-hidden  p-24 ${inter.className}`}
+        className={`flex min-h-screen flex-col items-center justify-between overflow-hidden p-24 ${inter.className}`}
       >
-        <About textStyle={textStyle} />
-        <Skills skills={skills} client={client} textStyle={textStyle} />
-        <Projects projects={projects} client={client} textStyle={textStyle} />
-        <Contact textStyle={textStyle} />
+        <Bounce>
+          <About />
+        </Bounce>
+        <Bounce>
+          <Skills skills={skills} />
+        </Bounce>
+        <Bounce>
+          <Projects projects={projects} />
+        </Bounce>
+        <Bounce>
+          <Contact />
+        </Bounce>
       </main>
     </div>
   );
@@ -40,7 +45,7 @@ export default function Home({ projects, skills }) {
 export async function getServerSideProps(context) {
   const query = '*[_type=="projects"]';
   const projects = await client.fetch(query);
-  const skillquery = '*[_type=="skills"]';
+  const skillquery = '*[_type=="skillCategory"]';
   const skills = await client.fetch(skillquery);
 
   return {

@@ -1,32 +1,63 @@
-import { useNextSanityImage } from "next-sanity-image";
-import Image from "next/image";
-import Marquee from "react-fast-marquee";
+import { useNextSanityImage } from 'next-sanity-image';
+import { Zoom, Slide, Fade } from 'react-reveal';
+import ProgressBar from './ProgressBar';
+import client from '@/utils/sanity';
+import Image from 'next/image';
+import { textStyle } from '@/utils/styles';
 
-export default function Skills({ skills, client, textStyle }) {
+const SkillItem = ({ skill }) => {
+  const imageProps = useNextSanityImage(client, skill.image);
+
   return (
-    <section className="w-screen  pt-20" id="skills">
-      <h1
-        className={`${textStyle} text-center text-5xl uppercase font-extrabold m-4 mb-8`}
-      >
-        Skills
-      </h1>
-      <div className="bg-gradient-to-tr from-pink-500 via-purple-500 to-yellow-500">
-        <Marquee speed={120}>
-          <div className="flex flex-wrap">
-            {skills.map((skill) => {
-              const imageProps = useNextSanityImage(client, skill.image);
-              return (
-                <Image
-                  {...imageProps}
-                  className="my-4 z-0 h-24 w-28 md:h-48 md:w-60 mx-4"
-                  alt={skill.image.alt}
-                  key={skill.name}
-                ></Image>
-              );
-            })}
+    <Fade>
+      <div className="mb-4 flex items-center">
+        <Zoom>
+          <div className="flex justify-center">
+            <Image {...imageProps} className="h-8 w-8 md:h-12 md:w-12" alt={skill.name} />
           </div>
-        </Marquee>
+        </Zoom>
+        <ProgressBar percentage={skill.level} />
       </div>
-    </section>
+    </Fade>
   );
-}
+};
+
+const CategoryCard = ({ category }) => {
+  return (
+    <Zoom>
+      <div className="border-white border-2 p-6 mx-8 rounded-lg shadow-md">
+        <Slide top>
+          <h2 className="text-2xl font-bold mb-4 text-center">{category.name}</h2>
+        </Slide>
+        <div className="">
+          {category.skills.map((skill) => (
+            <SkillItem key={skill._id} skill={skill} />
+          ))}
+        </div>
+      </div>
+    </Zoom>
+  );
+};
+
+const Skills = ({ skills }) => {
+  return (
+    <Slide bottom>
+      <section className="py-16" id="skills">
+        <Fade>
+          <h1 className={`text-5xl mb-8 text-center uppercase ${textStyle}`}>Skills</h1>
+        </Fade>
+        <div className="flex flex-wrap justify-center">
+          {skills.map((category) => (
+            <Zoom key={category._id}>
+              <div className="mb-8 m-4" key={category._id}>
+                <CategoryCard category={category} />
+              </div>
+            </Zoom>
+          ))}
+        </div>
+      </section>
+    </Slide>
+  );
+};
+
+export default Skills;
