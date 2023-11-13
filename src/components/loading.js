@@ -1,4 +1,4 @@
-import Quote from"@/components/quote";
+import Quote from"./Quote";
 import Lottie from "react-lottie";
 import animationData from "public/loading.json"
 
