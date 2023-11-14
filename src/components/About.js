@@ -1,11 +1,10 @@
 import { Fade, Zoom, Bounce } from "react-reveal";
 import Image from "next/image";
-import { textStyle } from "@/utils/styles";
 
 const About = () => {
   return (
     <section className="text-lg md:text-xl max-w-[85vw] w-[85vw]" id="about">
-      <h2 className={`${textStyle} text-center uppercase text-5xl mb-8 pt-20`}>
+      <h2 className="text-center uppercase text-5xl mb-8 pt-20">
         About Me
       </h2>
       <div className="md:flex justify-around items-center">
@@ -13,19 +12,18 @@ const About = () => {
           <div className="md:w-1/2 md:mx-8">
             <Fade left cascade>
               <p className="my-6 mt-8">
-                I am a passionate web developer with a focus on learning and
-                exploring new technologies. I have experience in Java, HTML, CSS,
-                JS, React, Flask, and Tailwind CSS. I hold React Basics and
+                I'm a passionate web developer, focusing on learning and
+                exploring new technologies. My expertise includes Java, HTML, CSS,
+                JavaScript, React, Flask, and Tailwind CSS. I hold React Basics and
                 Advanced certifications from Meta.
               </p>
             </Fade>
             <Fade left cascade>
               <p>
-                I enjoy continuously expanding my skills and staying updated
-                with web development trends. I'm enthusiastic about crafting
-                exceptional web experiences and love to bring ideas to life.
-                Beyond coding, I find joy in cycling, reading, and exploring
-                new ideas.
+                Continuously expanding my skills and staying updated with web
+                development trends drives my enthusiasm. Crafting exceptional web
+                experiences and bringing ideas to life excites me. Beyond coding,
+                I find joy in cycling, reading, and exploring new concepts.
               </p>
             </Fade>
             <Bounce>
