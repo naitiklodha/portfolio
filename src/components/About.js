@@ -1,16 +1,17 @@
 import { Fade, Zoom, Bounce } from "react-reveal";
 import Image from "next/image";
+import { textStyle } from "@/utils/styles";
 
 const About = () => {
   return (
-    <section className="text-lg md:text-xl max-w-[85vw] w-[85vw]" id="about">
-      <h2 className="text-center uppercase text-5xl mb-8 pt-20">
+    <section className="text-lg md:text-xl max-w-[85vw] w-screen" id="about">
+      <h2 className={`${textStyle} text-center uppercase text-5xl mb-8 pt-20`}>
         About Me
       </h2>
       <div className="md:flex justify-around items-center">
         <Fade left>
           <div className="md:w-1/2 md:mx-8">
-            <Fade left cascade>
+            <Fade left>
               <p className="my-6 mt-8">
                 I'm a passionate web developer, focusing on learning and
                 exploring new technologies. My expertise includes Java, HTML, CSS,
@@ -18,7 +19,7 @@ const About = () => {
                 Advanced certifications from Meta.
               </p>
             </Fade>
-            <Fade left cascade>
+            <Fade left >
               <p>
                 Continuously expanding my skills and staying updated with web
                 development trends drives my enthusiasm. Crafting exceptional web

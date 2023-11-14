@@ -17,7 +17,7 @@ export default function Loading() {
       };
     
     return (
-      <div className="flex flex-col items-center justify-center h-screen w-screen">
+      <div className="flex flex-col items-center justify-center h-screen w-screen px-4">
         <Lottie 
           options={defaultOptions}
           height={400}
