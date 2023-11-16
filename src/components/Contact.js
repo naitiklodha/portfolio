@@ -9,17 +9,18 @@ import { textStyle } from "@/utils/styles";
 const Contact = () => {
   const inputStyle =
     "border bg-gray-200 dark:bg-black border-gray-900 dark:border-white border-solid bg-transparent pl-4 rounded-md py-2 m-4 w-60";
-  const nameRef = useRef(null);
-  const emailRef = useRef(null);
-  const messageRef = useRef(null);
+  const nameRef = useRef("");
+  const emailRef = useRef("");
+  const messageRef = useRef("");
 
   const handleSubmit = async (e) => {
+    console.log(emailRef);
     e.preventDefault();
     const url = process.env.NEXT_PUBLIC_APPSCRIPT_URI;
     const data = {
-      name: nameRef.current?.value,
-      email: emailRef.current?.value,
-      message: messageRef.current?.value,
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      message: messageRef.current.value,
     };
 
     const requestOptions = {
@@ -32,9 +33,9 @@ const Contact = () => {
     fetch(url, requestOptions)
       .then((response) => {
         alert("Message sent successfully!");
-        nameRef.current.value = "";
-        emailRef.current.value = "";
-        messageRef.current.value = "";
+        nameRef.current.value = null;
+        emailRef.current.value = null;
+        messageRef.current.value = null;
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -44,7 +45,9 @@ const Contact = () => {
   return (
     <section className="my-8" id="contact">
       <Fade bottom>
-        <h1 className={`${textStyle} font-black text-5xl text-center uppercase mb-8`}>
+        <h1
+          className={`${textStyle} font-black text-5xl text-center uppercase mb-8`}
+        >
           Contact Me
         </h1>
       </Fade>
@@ -89,29 +92,25 @@ const Contact = () => {
               className="flex flex-col bg-inherit items-center"
               onSubmit={handleSubmit}
             >
-              <Fade right>
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  ref={nameRef}
-                  className={inputStyle}
-                />
-              </Fade>
-              <Fade right>
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  ref={emailRef}
-                  className={inputStyle}
-                />
-              </Fade>
-              <Fade right>
-                <textarea
-                  placeholder="Your Message"
-                  ref={messageRef}
-                  className={inputStyle}
-                />
-              </Fade>
+              <input
+                type="text"
+                placeholder="Your Name"
+                ref={nameRef}
+                className={inputStyle}
+              />
+
+              <input
+                type="email"
+                placeholder="Your Email"
+                ref={emailRef}
+                className={inputStyle}
+              />
+              <textarea
+                placeholder="Your Message"
+                ref={messageRef}
+                className={inputStyle}
+              />
+
               <Zoom>
                 <button
                   className="bg-gradient-to-tr w-48 p-2 mx-6 rounded-md from-pink-600 to-purple-500 text-white"
