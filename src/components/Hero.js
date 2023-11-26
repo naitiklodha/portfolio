@@ -9,11 +9,11 @@ import { textStyle } from "@/utils/styles";
 const Hero = () => {
   return (
     <section className="md:flex mt-12" id="top">
-      <Fade left>
+  
         <div className=" m-0">
           <Image src="/profile.png" alt="Naitik" width={600} height={300} priority />
         </div>
-      </Fade>
+
       <Slide right>
         <div className="md:w-1/2 md:mt-12 mx-4 ml-8 text-center md:text-left">
           <p className="text-2xl my-4">
