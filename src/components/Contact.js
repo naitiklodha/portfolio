@@ -97,6 +97,7 @@ const Contact = () => {
                 placeholder="Your Name"
                 ref={nameRef}
                 className={inputStyle}
+                required
               />
 
               <input
@@ -104,11 +105,13 @@ const Contact = () => {
                 placeholder="Your Email"
                 ref={emailRef}
                 className={inputStyle}
+                required
               />
               <textarea
                 placeholder="Your Message"
                 ref={messageRef}
                 className={inputStyle}
+                required
               />
 
               <Zoom>
