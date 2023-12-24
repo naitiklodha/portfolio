@@ -8,14 +8,14 @@ import { textStyle } from "@/utils/styles";
 
 const Hero = () => {
   return (
-    <section className="md:flex mt-12" id="top">
+    <section className="md:flex justify-center mt-12" id="top">
   
-        <div className=" m-0">
+        <div className="md:w-[50vw] m-0 ml-8">
           <Image src="/profile.png" alt="Naitik" width={600} height={300} priority />
         </div>
 
       <Slide right>
-        <div className="md:w-1/2 md:mt-12 mx-4 ml-8 text-center md:text-left">
+        <div className="md:w-[50vw] md:mt-12 mx-4 ml-8 text-center md:text-left">
           <p className="text-2xl my-4">
             Hello, my name is,{" "}
           </p>
