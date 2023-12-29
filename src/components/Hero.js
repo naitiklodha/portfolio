@@ -24,7 +24,7 @@ const Hero = () => {
           <h1 className={`${textStyle} font-black text-5xl`}>Naitik Lodha</h1>
 
           <div className="text-xl md:flex md:text-3xl">
-            I am a 17-year-old&nbsp;
+            I am a 18-year-old&nbsp;
             <div className={textStyle}>
               <Typewriter
                 options={{
