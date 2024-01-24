@@ -43,6 +43,7 @@ const Header = ( ) => {
           content="Naitik Lodha - Web Developer | React, TailwindCSS, Next.js, Flask. Explore my diverse range of projects highlighting expertise and creativity in web development. Discover how I bring ideas to life with seamless functionality and engaging user interfaces"
         />
         <meta charSet="UTF-8" />
+               <meta property="title" content="Naitik Lodha" />
         <meta
           name="description"
           content="Naitik Lodha - Web Developer | React, TailwindCSS, Next.js, Flask. Explore my diverse range of projects highlighting expertise and creativity in web development. Discover how I bring ideas to life with seamless functionality and engaging user interfaces"
