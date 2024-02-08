@@ -9,7 +9,7 @@ import { textStyle } from "@/utils/styles";
 const Hero = () => {
   return (
 
-    <section className="md:flex justify-center mt-12" id="top">
+    <section className="md:flex justify-around mt-12" id="top">
 
   
         <div className="md:w-[50vw] m-0 ml-8">
@@ -24,7 +24,7 @@ const Hero = () => {
           <h1 className={`${textStyle} font-black text-5xl`}>Naitik Lodha</h1>
 
           <div className="text-xl md:flex md:text-3xl">
-            I am a 17-year-old&nbsp;
+            I am a 18-year-old&nbsp;
             <div className={textStyle}>
               <Typewriter
                 options={{
