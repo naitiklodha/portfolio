@@ -18,19 +18,19 @@ const SocialLinks = () => {
   return (
     <div className="flex md:mt-5 justify-center md:justify-normal">
       <SocialLink
-        href="https://github.com/naitik-lodha"
+        href="https://github.com/naitiklodha"
         icon={<BsGithub size={35} />}
         title="GitHub Link of Naitik Lodha"
       />
 
       <SocialLink
-        href="https://www.linkedin.com/in/naitik-lodha"
+        href="https://www.linkedin.com/in/naitiklodha"
         icon={<BsLinkedin size={35} />}
         title="LinkedIn Link of Naitik Lodha"
       />
 
       <SocialLink
-        href="https://www.hackerrank.com/naitik_lodha"
+        href="https://www.hackerrank.com/naitiklodha"
         icon={<FaHackerrank size={35} />}
         title="HackerRank Link of Naitik Lodha"
       />
