@@ -9,7 +9,7 @@ import { textStyle } from "@/utils/styles";
 const Hero = () => {
   return (
 
-    <section className="md:flex justify-center mt-12" id="top">
+    <section className="md:flex justify-around mt-12" id="top">
 
   
         <div className="md:w-[50vw] m-0 ml-8">
