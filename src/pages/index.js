@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import client from "@/utils/sanity";
 import Header from "@/components/Header";
 import dynamic from "next/dynamic";
@@ -15,7 +15,6 @@ const Contact = dynamic(() => import("@/components/Contact"));
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ projects, skills }) {
-
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -30,29 +29,32 @@ export default function Home({ projects, skills }) {
     return <Loading />;
   }
   return (
-    <div className={`bg-black text-gray-400`}>
-      <Bounce>
-        <Header />
-      </Bounce>
-      <Hero />
+    <>
+      <Header />
 
-      <main
-        className={`flex min-h-screen flex-col items-center justify-between overflow-hidden p-24 ${inter.className}`}
-      >
+      <div className={`bg-black text-gray-400`}>
         <Bounce>
-          <About />
+          <Hero />
         </Bounce>
-        <Bounce>
-          <Skills skills={skills} />
-        </Bounce>
-        <Bounce>
-          <Projects projects={projects} />
-        </Bounce>
-        <Bounce>
-          <Contact />
-        </Bounce>
-      </main>
-    </div>
+
+        <main
+          className={`flex min-h-screen flex-col items-center justify-between overflow-hidden p-24 ${inter.className}`}
+        >
+          <Bounce>
+            <About />
+          </Bounce>
+          <Bounce>
+            <Skills skills={skills} />
+          </Bounce>
+          <Bounce>
+            <Projects projects={projects} />
+          </Bounce>
+          <Bounce>
+            <Contact />
+          </Bounce>
+        </main>
+      </div>
+    </>
   );
 }
 
