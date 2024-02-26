@@ -1,24 +1,20 @@
-import Quote from"./Quote";
+import Quote from "./Quote";
 import Lottie from "react-lottie";
-import animationData from "public/loading.json"
+import animationData from "public/loading.json";
 import Head from "next/head";
 
-
 export default function Loading() {
-  
-  
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-          preserveAspectRatio: "xMidYMid slice"
-        }
-      };
-    
-    return (
-      <div className="flex flex-col items-center justify-center h-screen w-screen px-4">
+  return (
+    <div className="flex flex-col items-center justify-center h-screen w-screen px-4">
       <Head>
         <title>Naitik Lodha</title>
         <meta property="og:title" content="Naitik Lodha" />
@@ -46,12 +42,8 @@ export default function Loading() {
         />
         <meta property="og:image" content="image.png" />
       </Head>
-        <Lottie 
-          options={defaultOptions}
-          height={400}
-          width={400}
-        />
-        <Quote/>
-      </div>
-    );
-  }
+      <Lottie options={defaultOptions} height={400} width={400} />
+      <Quote />
+    </div>
+  );
+}
