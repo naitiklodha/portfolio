@@ -8,19 +8,23 @@ import { textStyle } from "@/utils/styles";
 
 const Hero = () => {
   return (
-
-    <section className="md:flex justify-around mt-12" id="top">
-
-  
-        <div className="md:w-[50vw] m-0 ml-8">
-          <Image src="/profile.png" alt="Naitik" width={600} height={300} priority />
-        </div>
+    <section
+      className="md:flex items-center mt-8 justify-around h-[70vh] "
+      id="top"
+    >
+      <div className="md:w-[50vw] m-0 md:ml-8">
+        <Image
+          src="/profile.png"
+          alt="Naitik"
+          width={600}
+          height={300}
+          priority
+        />
+      </div>
 
       <Slide right>
         <div className="md:w-[50vw] md:mt-12 mx-4 ml-8 text-center md:text-left">
-          <p className="text-2xl my-4">
-            Hello, my name is,{" "}
-          </p>
+          <p className="text-2xl my-4">Hello, my name is, </p>
           <h1 className={`${textStyle} font-black text-5xl`}>Naitik Lodha</h1>
 
           <div className="text-xl md:flex md:text-3xl">

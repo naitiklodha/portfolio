@@ -14,7 +14,7 @@ const Projects = ({ projects }) => {
         </h1>
       </Fade>
 
-      <div className="md:flex mt-4">
+      <div className="md:flex flex-row-reverse flex-wrap justify-center mt-4">
         {projects.map((project) => {
           const imageProps = useNextSanityImage(client, project.image);
 
