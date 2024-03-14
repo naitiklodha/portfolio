@@ -76,7 +76,7 @@ const Header = ( ) => {
             {links.map((link, index) => (
               <li
                 key={index}
-                className={` text-xl ${
+                className={` text-xl my-4 ${
                   router.asPath === link.href ? `${textStyle} text-3xl` : ""
                 } hover:scale-125  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500`}
               >
@@ -85,9 +85,9 @@ const Header = ( ) => {
                 </Link>
               </li>
             ))}
-          
+
             <li>
-              <ResumeDownload />
+              <ResumeDownload className="my-4" />
             </li>
           </ul>
         </nav>
@@ -97,7 +97,7 @@ const Header = ( ) => {
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
+            className="inline-flex items-center  justify-center p-2 rounded-md text-white hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-indigo-500"
             aria-controls="mobile-menu"
             aria-expanded={isOpen}
           >
@@ -107,10 +107,7 @@ const Header = ( ) => {
         </div>
       </div>
       {isOpen && (
-        <div
-          className="block  md:hidden"
-          id="mobile-menu"
-        >
+        <div className="block  md:hidden" id="mobile-menu">
           <nav>
             <ul className="flex flex-col h-screen text-3xl justify-center bg-black items-center space-y-4">
               {links.map((link, index) => (

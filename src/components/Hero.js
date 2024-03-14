@@ -8,12 +8,13 @@ import { textStyle } from "@/utils/styles";
 
 const Hero = () => {
   return (
+
     <section
       className="md:flex items-center mt-8 justify-around h-[70vh] "
       id="top"
     >
       <div className="md:w-[50vw] m-0 md:ml-8">
-        <Image
+
           src="/profile.png"
           alt="Naitik"
           width={600}

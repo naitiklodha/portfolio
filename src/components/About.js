@@ -14,21 +14,24 @@ const About = () => {
             <Fade left>
               <p className="my-6 mt-8">
                 I'm a passionate web developer, focusing on learning and
-                exploring new technologies. My expertise includes Java, HTML, CSS,
-                JavaScript, React, Flask, and Tailwind CSS. I hold React Basics and
-                Advanced certifications from Meta.
+                exploring new technologies. My expertise includes Java, HTML,
+                CSS, JavaScript, React, Flask, and Tailwind CSS. I hold React
+                Basics and Advanced certifications from Meta.
               </p>
             </Fade>
-            <Fade left >
+            <Fade left>
               <p>
                 Continuously expanding my skills and staying updated with web
-                development trends drives my enthusiasm. Crafting exceptional web
-                experiences and bringing ideas to life excites me. Beyond coding,
-                I find joy in cycling, reading, and exploring new concepts.
+                development trends drives my enthusiasm. Crafting exceptional
+                web experiences and bringing ideas to life excites me. Beyond
+                coding, I find joy in cycling, reading, and exploring new
+                concepts.
               </p>
             </Fade>
             <Bounce>
-              <p className="text-xl mt-8">Let's build something amazing together!</p>
+              <p className="text-xl mt-8">
+                Let's build something amazing together!
+              </p>
             </Bounce>
           </div>
         </Fade>

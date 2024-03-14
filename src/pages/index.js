@@ -32,7 +32,9 @@ export default function Home({ projects, skills }) {
     <>
       <Header />
 
+
       <div className={`bg-black text-gray-400`}>
+
         <Bounce>
           <Hero />
         </Bounce>

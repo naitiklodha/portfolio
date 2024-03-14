@@ -21,10 +21,7 @@ const Projects = ({ projects }) => {
           return (
             <div key={project.name}>
               <Fade>
-                <Card
-                  project={project}
-                  imageProps={imageProps}
-                />
+                <Card project={project} imageProps={imageProps} />
               </Fade>
             </div>
           );
