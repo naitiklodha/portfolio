@@ -72,7 +72,7 @@ const Header = ( ) => {
           </Link>
         </div>
         <nav className="hidden md:block">
-          <ul className="flex space-x-6">
+          <ul className="flex items-center space-x-6">
             {links.map((link, index) => (
               <li
                 key={index}
