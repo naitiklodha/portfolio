@@ -64,10 +64,10 @@ const Contact = () => {
                 <p className="flex">
                   <MdEmail size={25} className="mr-4" />
                   <a
-                    href="mailto:naitik.lodha139@nmims.edu.in"
+                    href="mailto:lodhanaitik07@gmail.com"
                     className={` hover:scale-105 hover:underline  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500 `}
                   >
-                    naitik.lodha139@nmims.edu.in
+                    lodhanaitik07@gmail.com
                   </a>
                 </p>
               </Slide>
