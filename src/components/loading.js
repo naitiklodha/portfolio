@@ -1,6 +1,6 @@
 import Quote from "./Quote";
 import Lottie from "react-lottie";
-import animationData from "public/loading.json";
+import animationData from "/public/loading.json";
 import Head from "next/head";
 
 export default function Loading() {
