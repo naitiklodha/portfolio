@@ -14,7 +14,7 @@ export default function Loading() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen w-screen px-4">
+    <div className="flex flex-col items-center justify-center h-screen px-24">
       <Head>
         <title>Naitik Lodha</title>
         <meta property="og:title" content="Naitik Lodha" />
@@ -42,7 +42,12 @@ export default function Loading() {
         />
         <meta property="og:image" content="image.png" />
       </Head>
-      <Lottie options={defaultOptions} height={400} width={400} />
+      <div className="hidden md:block">
+        <Lottie options={defaultOptions} height={400} width={400} />
+      </div>
+      <div className="md:hidden">
+        <Lottie options={defaultOptions} height={250} width={250} />
+      </div>
       <Quote />
     </div>
   );
