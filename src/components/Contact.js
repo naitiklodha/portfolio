@@ -8,7 +8,7 @@ import { textStyle } from "@/utils/styles";
 
 const Contact = () => {
   const inputStyle =
-    "border bg-gray-200 dark:bg-black border-gray-900 dark:border-white border-solid bg-transparent pl-4 rounded-md py-2 m-4 w-60";
+    "border  border-gray-900 dark:border-white border-solid bg-transparent pl-4 rounded-md py-2 m-4 w-60";
   const nameRef = useRef("");
   const emailRef = useRef("");
   const messageRef = useRef("");
@@ -46,7 +46,7 @@ const Contact = () => {
     <section className="my-8" id="contact">
       <Fade bottom>
         <h1
-          className={`${textStyle} font-black text-5xl text-center uppercase mb-8`}
+          className={`text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-600 font-black text-5xl text-center uppercase mb-8`}
         >
           Contact Me
         </h1>
@@ -65,7 +65,7 @@ const Contact = () => {
                   <MdEmail size={25} className="mr-4" />
                   <a
                     href="mailto:lodhanaitik07@gmail.com"
-                    className={` hover:scale-105 hover:underline  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500 `}
+                    className={` hover:scale-105 hover:underline  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-red-400  to-pink-600 `}
                   >
                     lodhanaitik07@gmail.com
                   </a>
@@ -76,7 +76,7 @@ const Contact = () => {
                   <BsPhone size={25} className="mr-2" />
                   <a
                     href="tel:+917045503998"
-                    className={` hover:scale-105 hover:underline  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-purple-500  to-pink-500 `}
+                    className={` hover:scale-105 hover:underline  hover:bg-clip-text hover:text-transparent hover:bg-gradient-to-tr from-red-400  to-pink-600 `}
                   >
                     +91 70455 03998
                   </a>
@@ -116,7 +116,7 @@ const Contact = () => {
 
               <Zoom>
                 <button
-                  className="bg-gradient-to-tr w-48 p-2 mx-6 rounded-md from-pink-600 to-purple-500 text-white"
+                  className="bg-gradient-to-tr w-48 p-2 mx-6 rounded-md from-red-400 to-pink-600 text-white"
                   type="submit"
                 >
                   Send Message

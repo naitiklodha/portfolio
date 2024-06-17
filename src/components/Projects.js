@@ -6,10 +6,13 @@ import { textStyle } from "@/utils/styles";
 import client from "@/utils/sanity";
 
 const Projects = ({ projects }) => {
+  console.log(projects);
   return (
     <div className="m-4 pt-20" id="projects">
       <Fade>
-        <h1 className={`${textStyle} text-5xl uppercase text-center mb-8`}>
+        <h1
+          className={`tracking-tight text-transparent font-bold bg-clip-text bg-gradient-to-r from-blue-400  to-pink-600 text-5xl uppercase text-center mb-8`}
+        >
           Projects
         </h1>
       </Fade>

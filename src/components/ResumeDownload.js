@@ -1,17 +1,13 @@
 import { FiDownload } from "react-icons/fi";
+
 const ResumeDownload = () => {
   return (
-    <>
-      {" "}
-
-      <button className="bg-gradient-to-tr p-2 text-white top-0 px-4 rounded-md from-pink-600 to-purple-500">
-        <a className="flex items-center gap-1" href="NAITIK_LODHA.pdf" title="" download>
-
-          Resume
-          <FiDownload size={18} color="white" />
-        </a>
-      </button>
-    </>
+    <button className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-transform transform hover:scale-105">
+      <a href="/NAITIK_LODHA.pdf" download className="flex items-center gap-2">
+        View Resume
+      </a>
+    </button>
   );
 };
+
 export default ResumeDownload;

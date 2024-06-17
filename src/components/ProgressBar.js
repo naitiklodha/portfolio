@@ -11,7 +11,7 @@ const ProgressBar = ({ percentage }) => {
       <div className="flex overflow-hidden h-3 mb-4 text-xs rounded-full bg-gray-500   w-full">
         <div
           style={{ width: `${percentage}%` }}
-          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center rounded-full h-full bg-gradient-to-r from-pink-500 to-purple-500 "
+          className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center rounded-full h-full bg-gradient-to-r from-[#ff1b6b] to-[#45caff] "
         ></div>
       </div>
     </div>

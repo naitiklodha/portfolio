@@ -3,7 +3,7 @@ import { FaHackerrank } from "react-icons/fa";
 import { Flip } from "react-reveal";
 
 const SocialLink = ({ href, icon, title }) => {
-  const iconStyle = "m-4 hover:scale-110 hover:text-purple-500";
+  const iconStyle = "m-4 hover:scale-110 hover:text-red-500";
 
   return (
     <Flip>

@@ -35,7 +35,7 @@ const CategoryCard = ({ category }) => {
   return (
     <div className="border-gray-500 border-2 p-6 mx-8 rounded-lg shadow-md hover:scale-110">
       <Slide top>
-        <h2 className={`${textStyle} text-2xl font-bold mb-4 text-center`}>
+        <h2 className={` text-2xl font-bold mb-4 text-center`}>
           {category.name}
         </h2>
       </Slide>
@@ -52,11 +52,12 @@ const Skills = ({ skills }) => {
   return (
     <Slide bottom>
       <section className="py-16" id="skills">
-        <Fade>
-          <h1 className={`text-5xl mb-8 text-center uppercase ${textStyle}`}>
-            Skills
-          </h1>
-        </Fade>
+        {/* <Fade> */}
+        <h1 className="text-transparent font-bold bg-clip-text uppercase bg-gradient-to-r to-[#45caff] from-[#ff1b6b] text-5xl text-center mb-8">
+          Skills
+        </h1>
+
+        {/* </Fade> */}
         <div className="flex flex-wrap justify-center">
           {skills.map((category) => (
             <Zoom key={category._id}>

@@ -5,14 +5,22 @@ import Header from "@/components/Header";
 import dynamic from "next/dynamic";
 import { Bounce } from "react-reveal";
 import Loading from "@/components/loading";
+import { Roboto } from "next/font/google";
+import Hero from "@/components/Hero";
 
-const Hero = dynamic(() => import("@/components/Hero"));
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+
+
 const About = dynamic(() => import("@/components/About"));
 const Skills = dynamic(() => import("@/components/Skills"));
 const Projects = dynamic(() => import("@/components/Projects"));
 const Contact = dynamic(() => import("@/components/Contact"));
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home({ projects, skills }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -32,15 +40,13 @@ export default function Home({ projects, skills }) {
     <>
       <Header />
 
-
-      <div className={`bg-black text-gray-400`}>
-
+      <div className={`bg-[#1e1e1e] text-gray-200`}>
         <Bounce>
           <Hero />
         </Bounce>
 
         <main
-          className={`flex min-h-screen flex-col items-center justify-between overflow-hidden p-24 ${inter.className}`}
+          className={`flex min-h-screen flex-col items-center justify-between overflow-hidden p-24 pt-12 ${roboto.className}`}
         >
           <Bounce>
             <About />

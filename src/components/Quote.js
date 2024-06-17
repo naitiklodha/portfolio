@@ -25,7 +25,7 @@ const Quote = () => {
   }, []);
 
   return (
-    <div className="text-center text-gray-500 max-w-4/5">
+    <div className="text-center text-gray-200 max-w-4/5">
       <p className="text-xl">{quote}</p>
     </div>
   );
