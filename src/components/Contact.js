@@ -4,7 +4,6 @@ import { MdEmail } from "react-icons/md";
 import SocialLinks from "./SocialLinks";
 import { useRef } from "react";
 import { Fade, Slide, Zoom } from "react-reveal";
-import { textStyle } from "@/utils/styles";
 
 const Contact = () => {
   const inputStyle =

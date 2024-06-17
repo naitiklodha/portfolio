@@ -3,7 +3,6 @@ import { Zoom, Slide, Fade } from "react-reveal";
 import ProgressBar from "./ProgressBar";
 import client from "@/utils/sanity";
 import Image from "next/image";
-import { textStyle } from "@/utils/styles";
 
 const SkillItem = ({ skill }) => {
   const imageProps = useNextSanityImage(client, skill.image);

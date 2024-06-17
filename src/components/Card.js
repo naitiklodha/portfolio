@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade, Zoom, Slide, Bounce } from "react-reveal";
+import {  Zoom, Slide } from "react-reveal";
 import Image from "next/image";
 import { BsGithub, BsGlobe } from "react-icons/bs";
 

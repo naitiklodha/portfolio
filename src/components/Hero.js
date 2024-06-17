@@ -3,7 +3,7 @@ import Typewriter from "typewriter-effect";
 import SocialLinks from "./SocialLinks";
 import Image from "next/image";
 import ResumeDownload from "./ResumeDownload";
-import { Slide, Zoom } from "react-reveal";
+import {  Zoom } from "react-reveal";
 import Link from "next/link";
 
 const Hero = () => {

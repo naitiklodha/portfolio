@@ -2,7 +2,6 @@ import React from "react";
 import { Fade } from "react-reveal";
 import { useNextSanityImage } from "next-sanity-image";
 import Card from "./Card";
-import { textStyle } from "@/utils/styles";
 import client from "@/utils/sanity";
 
 const Projects = ({ projects }) => {

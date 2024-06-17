@@ -1,6 +1,5 @@
 import { Fade, Zoom, Bounce } from "react-reveal";
 import Image from "next/image";
-import { textStyle } from "@/utils/styles";
 
 const About = () => {
   return (

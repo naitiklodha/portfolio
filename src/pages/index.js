@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import { useState, useEffect } from "react";
 import client from "@/utils/sanity";
 import Header from "@/components/Header";
