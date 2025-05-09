@@ -18,7 +18,7 @@ const Hero = () => {
         />
       </Zoom>
 
-      <p className="text-xl leading-tight mt-4">I am an 18 year old</p>
+      <p className="text-xl leading-tight mt-4">I am a 19 year old</p>
       <div className="text-transparent text-3xl bg-clip-text bg-gradient-to-r from-blue-400 to-red-600 m-4 font-bold">
         <Typewriter
           options={{
